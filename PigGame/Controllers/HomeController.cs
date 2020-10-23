@@ -14,15 +14,16 @@ namespace PigGame.Controllers
     {
         public IActionResult Roll()
         {
-
+            return RedirectToAction("Index");
         }
         public IActionResult Hold()
         {
-
+            return RedirectToAction("Index");
         }
         public IActionResult NewGame()
         {
-
+            var session = new PigSession(HttpContext.Session);
+            return View();
         }
         
         public IActionResult Index()
