@@ -40,13 +40,13 @@ namespace PigGame.Models
             {
                 //Player1 Wins
                 //document writeout (CurrentPlayer()) + " " + "wins!"
-                //NewGame();
+                NewGame();
             }
             else if (Player2.TotalScore >= 20)
             {
                 //Player2 Wins
                 //output player2 wins
-                //NewGame();
+                NewGame();
             }
             //Add TempScore to TotalScore
             else if (Player1.IsTurn && Player1.TotalScore < 20)
