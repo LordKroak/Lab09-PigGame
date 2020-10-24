@@ -12,6 +12,35 @@
         <header class="jumbotron text-center">
             <h1 class="bg-primary mt-3 p-3">Let's Play Pig!</h1>
         </header>
+        <div class="row float-left">
+            <div class="col-sm">
+                <p>Player 1: </p>
+                <p>Player 2: </p>
+                <a class="btn btn-light float-right" asp-controller="Home" asp-action="NewGame">New Game</a>
+            </div>
+            <div class="col-sm">
+                <p>Player 1's Turn</p>
+                <a class="btn btn-dark" asp-controller="Home" asp-action="Roll">Roll</a>
+                <a class="btn btn-light" asp-controller="Home" asp-action="Hold">Hold</a>
+            </div>
+        </div>
+        <div class="row float-right"
+            <div class="col-sm">
+                <p>First player to 20 wins.</p>
+            </div>
+            <div class="col-sm">
+                <p>Players taking turns rolling the die.</p>
+            </div>
+            <div class="col-sm">
+                <p>Turn ends when player rolls a 1 or chooses to hold.</p>
+            </div>
+            <div class="col-sm">
+                <p>If player rolls a 1, they lose all points earned during that turn.</p>
+            </div>
+            <div class="col-sm">
+                <p>If player holds, points earned during that turn are added to their total.</p>
+            </div>
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

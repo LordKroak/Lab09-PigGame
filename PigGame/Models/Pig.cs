@@ -87,6 +87,7 @@ namespace PigGame.Models
                 Player1.IsTurn = true;
                 Player2.IsTurn = false;
             }
+            TempScore = 0;
         }
 
         public Player CurrentPlayer()
