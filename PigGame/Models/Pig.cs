@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace PigGame.Models
         //TODO setup a class that does everything for the game.
         public Player Player1 { get; set; }
         public Player Player2 { get; set; }
+        [TempData]
         public int TempScore { get; set; }
         public void Roll()
         {
@@ -65,7 +67,6 @@ namespace PigGame.Models
 
         public void NewGame()
         {
-            //ends current session
             //begins new session / game
             //set player1 IsTurn = true
             Player1.IsTurn = true;
@@ -88,18 +89,14 @@ namespace PigGame.Models
             }
         }
 
-        public void CurrentPlayer()
+        public Player CurrentPlayer()
         {
             if (Player1.IsTurn)
             {
-                Player1 = CurrentPlayer;
+                return Player1;
                 //display current player
             }
-            else
-            {
-                Player2 = CurrentPlayer;
-                //display current player
-            }
+            return Player2;
         }
     }
 }

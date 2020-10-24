@@ -23,7 +23,7 @@ namespace PigGame.Controllers
         public IActionResult NewGame()
         {
             var session = new PigSession(HttpContext.Session);
-            return View();
+            return RedirectToAction("Index");
         }
         
         public IActionResult Index()
