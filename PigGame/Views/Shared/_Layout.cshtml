@@ -4,15 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PigGame</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container">
         <header class="jumbotron text-center">
             <h1 class="bg-primary mt-3 p-3">Let's Play Pig!</h1>
         </header>
-        <div class="row float-left">
+        <div class="row">
             <div class="col-sm">
                 <p>Player 1: </p>
                 <p>Player 2: </p>
@@ -24,7 +26,7 @@
                 <a class="btn btn-light" asp-controller="Home" asp-action="Hold">Hold</a>
             </div>
         </div>
-        <div class="row float-right"
+        <div class="row">
             <div class="col-sm">
                 <p>First player to 20 wins.</p>
             </div>
