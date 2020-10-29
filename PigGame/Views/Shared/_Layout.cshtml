@@ -9,55 +9,7 @@
     <link rel="stylesheet" href="~/lib/jquery/jquery.min.js" />
 </head>
 <body>
-    <div class="container">
-        <header class="jumbotron text-center">
-            <h1 class="bg-primary mt-3 p-3">Let's Play Pig!</h1>
-        </header>
-        <div class="row justify-content-between">
-            <div class="col">
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>Player 1: </a> <br />
-                        <a class="btn btn-light float-right" asp-controller="Home" asp-action="NewGame">New Game</a>
-                        <a>Player 2: </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>Player 1's Turn</a><br />
-                        <a class="btn btn-dark" asp-controller="Home" asp-action="Roll">Roll</a>
-                        <a class="btn btn-light" asp-controller="Home" asp-action="Hold">Hold</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>First player to 20 wins.</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>Players taking turns rolling the die.</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>Turn ends when player rolls a 1 or chooses to hold.</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>If player rolls a 1, they lose all points earned during that turn.</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10">
-                        <a>If player holds, points earned during that turn are added to their total.</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="containter">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
